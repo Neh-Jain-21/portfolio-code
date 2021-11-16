@@ -5,47 +5,27 @@ import { Mail, LinkedIn, GitHub } from "@mui/icons-material";
 // components
 import PageHeader from "src/components/PageHeader";
 
-const Contact = () => {
+const Contact = (props) => {
     return (
         <>
             <Grid id="contact">
                 <PageHeader color="#d24d57" title="CONTACT" />
                 <Grid container flexDirection="column" alignItems="center">
-                    <Grid
-                        sx={{ my: 5 }}
-                        container
-                        flexDirection="column"
-                        textAlign="center"
-                    >
+                    <Grid sx={{ my: 5 }} container flexDirection="column" textAlign="center">
                         <Typography variant="h4" color="#D24D57">
                             LET'S CREATE SOMETHING GREAT
                         </Typography>
                         <Typography variant="h6" fontWeight="normal">
-                            If you like my work and want me to hire, just send
-                            me direct message or contact me through social sites
-                            listed below.
+                            If you like my work and want me to hire, just send me direct message or
+                            contact me through social sites listed below.
                         </Typography>
                     </Grid>
-                    <a
-                        href="mailto:nehjain.2001@gmail.com"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <Button
-                            size="large"
-                            color="error"
-                            variant="outlined"
-                            startIcon={<Mail />}
-                        >
+                    <a href="mailto:nehjain.2001@gmail.com" target="_blank" rel="noreferrer">
+                        <Button size="large" color="error" variant="outlined" startIcon={<Mail />}>
                             GET IN TOUCH
                         </Button>
                     </a>
-                    <Grid
-                        sx={{ mt: 0, mb: 3 }}
-                        container
-                        width="auto"
-                        spacing={8}
-                    >
+                    <Grid sx={{ mt: 0, mb: 3 }} container width="auto" spacing={8}>
                         <Grid item xs={4}>
                             <a
                                 href="https://github.com/Neh-Jain-21"
@@ -159,6 +139,7 @@ const Contact = () => {
 
             <Grid
                 container
+                direction="column"
                 sx={{
                     bgcolor: "#252525",
                     color: "white",
@@ -179,20 +160,12 @@ const Contact = () => {
                         VsCode
                     </a>
                     ,
-                    <a
-                        href="https://reactjs.org/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
+                    <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
                         {" "}
                         React JS
                     </a>
                     ,
-                    <a
-                        href="https://nodejs.org/en/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
+                    <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">
                         {" "}
                         Node JS
                     </a>{" "}
@@ -201,6 +174,9 @@ const Contact = () => {
                         {" "}
                         MUI.
                     </a>
+                </Typography>
+                <Typography variant="caption" component="div" textAlign="center">
+                    {props.users} Website Visits Till Now.
                 </Typography>
             </Grid>
         </>
